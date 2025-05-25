@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StartupX - Launch Your Dream</title>
+  <meta name="description" content="Launch your startup faster with StartupX. Tools, mentorship, and support for entrepreneurs.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#" aria-label="StartupX homepage">StartupX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center d-flex align-items-center" id="home">
+    <div class="container text-white">
+      <h1 class="display-4 fw-bold">Launch Your Dream With StartupX</h1>
+      <p class="lead mb-4">Build, scale, and grow your startup with our powerful tools.</p>
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="#features" class="btn btn-outline-light btn-lg">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container text-center">
+      <h2 class="mb-4">Features</h2>
+      <div class="row">
+        <div class="col-md-4 feature-card" data-title="Fast Launch" data-description="Deploy your MVP in days, not months. Get ahead of the competition with our streamlined tools.">
+          <i class="fas fa-rocket fa-3x mb-3"></i>
+          <h5>Fast Launch</h5>
+          <p>Deploy your MVP in days, not months.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm feature-btn">Read More</a>
+        </div>
+        <div class="col-md-4 feature-card" data-title="Secure" data-description="Enterprise-grade security for all your data. Protect your business and your users.">
+          <i class="fas fa-lock fa-3x mb-3"></i>
+          <h5>Secure</h5>
+          <p>Enterprise-grade security for all your data.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm feature-btn">Read More</a>
+        </div>
+        <div class="col-md-4 feature-card" data-title="Analytics" data-description="Track your growth and performance in real-time. Make informed decisions backed by data.">
+          <i class="fas fa-chart-line fa-3x mb-3"></i>
+          <h5>Analytics</h5>
+          <p>Track your growth and performance in real-time.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm feature-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Dynamic Feature Detail -->
+      <div id="featureDetail" class="mt-5 d-none">
+        <h3 id="featureTitle" class="fw-bold"></h3>
+        <p id="featureDesc" class="lead"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container text-center">
+      <h2>About Us</h2>
+      <p class="lead">
+        StartX Tamil Nadu is a dynamic startup accelerator program designed to transform early-stage ventures into investor-ready companies in just 8 weeks. 
+        Operated by Start Insights, our mission is to empower entrepreneurs across Tamil Nadu by providing them with the tools, mentorship, and resources needed to scale their businesses effectively.
+      </p>
+      <a href="#contact" class="btn btn-dark mt-3">Join Us</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form id="contactForm" class="col-md-8 offset-md-2 needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required />
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required />
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+          <div class="invalid-feedback">Please enter your message.</div>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap gap-3">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <a href="https://calendly.com" target="_blank" class="btn btn-outline-secondary">Schedule a Call</a>
+        </div>
+      </form>
+      <div id="formAlert" class="alert alert-success mt-3 d-none text-center">
+        Message sent successfully!
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center">&copy; 2025 StartupX. All rights reserved.</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    // Handle feature click
+    document.querySelectorAll('.feature-btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const card = this.closest('.feature-card');
+        const title = card.getAttribute('data-title');
+        const desc = card.getAttribute('data-description');
+
+        document.getElementById('featureTitle').textContent = title;
+        document.getElementById('featureDesc').textContent = desc;
+
+        const detailSection = document.getElementById('featureDetail');
+        detailSection.classList.remove('d-none');
+        detailSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Form validation and submission
+    (() => {
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          e.stopPropagation();
+          form.classList.add('was-validated');
+        } else {
+          document.getElementById('formAlert').classList.remove('d-none');
+          form.reset();
+          form.classList.remove('was-validated');
+        }
+      }, false);
+    })();
+  </script>
+</body>
+</html>
